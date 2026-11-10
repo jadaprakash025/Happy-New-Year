@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="160" height="80">
+  <defs>
+    <linearGradient id="shubhGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="40%" stop-color="#FCD34D"/>
+      <stop offset="80%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="badgeShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Left Pill: શુભ -->
+  <g transform="translate(10, 10)" filter="url(#badgeShadow)">
+    <rect x="0" y="0" width="65" height="60" rx="16" fill="#7F1D1D" stroke="url(#shubhGold)" stroke-width="2"/>
+    <circle cx="32" cy="30" r="24" fill="none" stroke="#F59E0B" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <text x="32.5" y="38" font-family="'Hind Vadodara', sans-serif" font-size="22" font-weight="700" fill="#FFFBEB" text-anchor="middle">શુભ</text>
+  </g>
+
+  <!-- Right Pill: લાભ -->
+  <g transform="translate(85, 10)" filter="url(#badgeShadow)">
+    <rect x="0" y="0" width="65" height="60" rx="16" fill="#7F1D1D" stroke="url(#shubhGold)" stroke-width="2"/>
+    <circle cx="32" cy="30" r="24" fill="none" stroke="#F59E0B" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <text x="32.5" y="38" font-family="'Hind Vadodara', sans-serif" font-size="22" font-weight="700" fill="#FFFBEB" text-anchor="middle">લાભ</text>
+  </g>
+</svg>
+

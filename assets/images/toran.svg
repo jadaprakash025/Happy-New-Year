@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="1200" height="80" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="goldToran" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="20%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#FFFBEB"/>
+      <stop offset="80%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="60%" stop-color="#166534"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <filter id="toranGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Top Golden Hanging String -->
+  <path d="M0 8 Q 150 14, 300 8 Q 450 14, 600 8 Q 750 14, 900 8 Q 1050 14, 1200 8" stroke="url(#goldToran)" stroke-width="4" fill="none" filter="url(#toranGlow)"/>
+
+  <!-- Repeating Mango Leaves and Golden Beads across the 1200 width -->
+  <!-- Loop 1 to 10 scalloped segments -->
+  <g fill="url(#goldToran)">
+    <!-- Swags / Marigold Garland -->
+    <path d="M0 8 Q 60 45, 120 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M120 8 Q 180 45, 240 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M240 8 Q 300 45, 360 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M360 8 Q 420 45, 480 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M480 8 Q 540 45, 600 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M600 8 Q 660 45, 720 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M720 8 Q 780 45, 840 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M840 8 Q 900 45, 960 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M960 8 Q 1020 45, 1080 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <path d="M1080 8 Q 1140 45, 1200 8" fill="none" stroke="#F59E0B" stroke-width="3"/>
+  </g>
+
+  <!-- Hanging Mango Leaves (Asopalav) & Golden Bells -->
+  <g id="hangingElements">
+    <!-- Leaves at each node -->
+    <g transform="translate(60, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(180, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(300, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(420, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(540, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(660, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(780, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(900, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(1020, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+    <g transform="translate(1140, 25)">
+      <path d="M0 0 C-10 18 -8 40 0 55 C8 40 10 18 0 0 Z" fill="url(#leafGrad)"/>
+      <circle cx="0" cy="55" r="4" fill="#FCD34D"/>
+    </g>
+
+    <!-- Golden Bells & Marigold flowers at each scallop peak -->
+    <!-- Nodes at 0, 120, 240, 360, 480, 600, 720, 840, 960, 1080, 1200 -->
+    <circle cx="120" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="120" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="240" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="240" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="360" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="360" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="480" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="480" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="600" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="600" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="720" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="720" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="840" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="840" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="960" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="960" cy="12" r="4" fill="#FFFBEB"/>
+    <circle cx="1080" cy="12" r="7" fill="#F59E0B"/>
+    <circle cx="1080" cy="12" r="4" fill="#FFFBEB"/>
+  </g>
+</svg>
+

@@ -1,499 +1,880 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="gu">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HYAPE</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  
+  <!-- Primary Meta Tags -->
+  <title>શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન ૨૦૨૭ | Happy New Year 2027 | Jada Prakash</title>
+  <meta name="title" content="શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન ૨૦૨૭ | Happy New Year 2027 | Jada Prakash">
+  <meta name="description" content="આજે નવું વર્ષ (બેસતું વર્ષ) છે! સાલ મુબારક ૨૦૨૭! તમને અને તમારા પરિવારને હાર્દિક શુભકામનાઓ! A royal interactive Diwali & Bestu Varas New Year celebration from Jada Prakash.">
+  <meta name="author" content="Jada Prakash">
+  <meta name="theme-color" content="#030712">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Open Graph / WhatsApp Preview Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jadaprakash.github.io/new-year-2027/">
+  <meta property="og:title" content="🪔 આજે બેસતું વર્ષ છે! શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન ૨૦૨૭! ✨ Jada Prakash">
+  <meta property="og:description" content="આજે નવું વર્ષ છે! તમને અને તમારા સમગ્ર પરિવારને બેસતા વર્ષની હાર્દિક શુભકામનાઓ! સાલ મુબારક! આ ખાસ ડિજિટલ શુભેચ્છા અને ફટાકડા જોવા અહીં ક્લિક કરો!">
+  <meta property="og:image" content="assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <link rel="stylesheet" href="style.css" />
+  <!-- Twitter Preview Tags -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jadaprakash.github.io/new-year-2027/">
+  <meta property="twitter:title" content="🪔 આજે બેસતું વર્ષ છે! શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન ૨૦૨૭! ✨ Jada Prakash">
+  <meta property="twitter:description" content="આજે નવું વર્ષ છે! તમને અને તમારા પરિવારને બેસતા વર્ષની હાર્દિક શુભકામનાઓ! સાલ મુબારક!">
+  <meta property="twitter:image" content="assets/images/og-preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Authentic Gujarati (Hind Vadodara), Royal Serif (Cinzel), Modern Sans (Outfit) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Hind+Vadodara:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="contact">
-            <span>
-                <i class="fa-solid fa-phone"></i>
-                123-123456789
-            </span>
 
-            <span>
-                <i class="fa-solid fa-envelope"></i>
-                info@itnt.com
-            </span>
+  <!-- Fullscreen Interactive Canvas for Fireworks & Confetti -->
+  <canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Festive Glow Orbs in Background -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-middle" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Audio Element for Celebration Music -->
+  <audio id="celebrationAudio" preload="auto" loop>
+    <source src="assets/music/celebration.wav" type="audio/wav">
+    <source src="assets/music/celebration.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Auspicious Shubh & Labh Wall Badges (Desktop Sidebars) -->
+  <aside class="shubh-labh-sidebars" aria-hidden="true">
+    <div class="side-badge shubh-badge">
+      <span class="badge-char">શુભ</span>
+    </div>
+    <div class="side-badge labh-badge">
+      <span class="badge-char">લાભ</span>
+    </div>
+  </aside>
+
+  <!-- Top Festive Navigation Bar (Clean & Unobstructed) -->
+  <header class="festive-nav" id="festiveNav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="બેસતું વર્ષ ૨૦૨૭">
+        <img src="assets/images/favicon.svg" alt="2027 Emblem" class="nav-logo-icon">
+        <span class="nav-logo-text"><span class="guj-badge">નૂતન વર્ષ</span> <span class="gold-gradient-text">૨૦૨૭</span></span>
+      </a>
+
+      <!-- Desktop Nav Links & Mobile Slide-down Drawer -->
+      <nav class="nav-links" id="navLinks" aria-label="Section Navigation">
+        <a href="#diyaSection" class="nav-link"><i class="fa-solid fa-fire-flame-curved"></i> દીવો પ્રગટાવો</a>
+        <a href="#wishes" class="nav-link"><i class="fa-solid fa-heart"></i> શુભેચ્છાઓ</a>
+        <a href="#specialMessage" class="nav-link"><i class="fa-solid fa-envelope-open-text"></i> ખાસ સંદેશ</a>
+        <a href="#blessings" class="nav-link"><i class="fa-solid fa-gem"></i> આશીર્વાદ</a>
+        <a href="#shareSection" class="nav-link nav-link-highlight"><i class="fa-brands fa-whatsapp"></i> વ્હોટ્સએપ શેર</a>
+      </nav>
+
+      <!-- Right Header Actions (Sound Pill & Mobile Hamburger Toggle) -->
+      <div class="nav-actions-group">
+        <button id="navSoundBtn" class="nav-sound-pill" aria-label="Toggle Audio">
+          <i class="fa-solid fa-volume-xmark" id="navSoundIcon"></i>
+          <span id="navSoundText">સંગીત</span>
+        </button>
+
+        <!-- Mobile Toggle Hamburger Button -->
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="મેનુ ખોલો/બંધ કરો" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Traditional Golden Toran Hanging Gracefully UNDERNEATH the Navbar (Never overlapping text!) -->
+    <div class="festive-toran-container" aria-hidden="true">
+      <img src="assets/images/toran.svg" alt="Auspicious Toran" class="festive-toran-img">
+    </div>
+  </header>
+
+  <!-- Mobile Floating Bottom Quick Action Bar (Thumb-Friendly for WhatsApp, Music & Diya) -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile quick actions">
+    <button id="mobileDiyaBtn" class="mobile-bar-btn" title="દીવો પ્રગટાવો">
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>દીવો પ્રગટાવો</span>
+    </button>
+    <button id="mobileMusicBtn" class="mobile-bar-btn" title="મ્યુઝિક ચાલુ/બંધ">
+      <i class="fa-solid fa-music" id="mobileMusicIcon"></i>
+      <span id="mobileMusicLabel">મ્યુઝિક</span>
+    </button>
+    <button id="mobileWhatsAppBtn" class="mobile-bar-btn mobile-wa-btn" title="WhatsApp Share">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp શેર</span>
+    </button>
+  </nav>
+
+  <!-- Floating Audio Controls (Desktop/Tablet) -->
+  <aside class="floating-controls" aria-label="Audio and celebration controls">
+    <button id="musicToggleBtn" class="floating-btn music-btn" aria-label="Toggle celebration music" title="Toggle Celebration Music">
+      <div class="music-icon-wrap">
+        <i class="fa-solid fa-music" id="musicIcon"></i>
+        <span class="music-waves" id="musicWaves" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+      </div>
+      <span class="floating-btn-label" id="musicLabel">Music: OFF</span>
+    </button>
+
+    <button id="quickShareBtn" class="floating-btn whatsapp-quick-btn" aria-label="Quick WhatsApp Share" title="Share directly on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-btn-label">Share on WhatsApp</span>
+    </button>
+  </aside>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="page-wrapper">
+
+    <!-- ==============================================
+         1. MAIN HERO SECTION (DIWALI & BESTU VARAS 2027)
+         ============================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+
+        <!-- Auspicious Gujarati Pill (Dynamically updated via URL ?name=Rahul) -->
+        <div class="personalized-pill-wrap" id="personalizedBanner">
+          <div class="personalized-pill">
+            <span class="sparkle-icon">🪔</span>
+            <span id="greetingRecipient" class="recipient-text">આજે બેસતું વર્ષ છે • સાલ મુબારક ૨૦૨૭!</span>
+            <span class="sparkle-icon">✨</span>
+          </div>
         </div>
 
-        <div class="login">
-            <a href="#">My Account</a>
-            <a href="#">Wishlist</a>
-            <a href="#">Cart</a>
-            <a href="#">Checkout</a>
-            <a href="#">
-                <i class="fa-regular fa-user"></i>
-                Login/Register
+        <!-- Royal Emblem / Diya Badge -->
+        <div class="hero-badge-wrap">
+          <div class="golden-emblem-badge">
+            <img src="assets/images/golden-badge.svg" alt="Luxury 2027 Seal" class="emblem-img" loading="eager">
+          </div>
+        </div>
+
+        <!-- Main Heading Group -->
+        <div class="hero-heading-group">
+          <p class="hero-pre-title">દીપોત્સવ અને વિક્રમ સંવત • આજે બેસતું વર્ષ</p>
+          
+          <h1 class="hero-main-title">
+            <span class="title-word gold-shimmer">HAPPY</span>
+            <span class="title-word gold-shimmer">NEW</span>
+            <span class="title-word gold-shimmer">YEAR</span>
+          </h1>
+
+          <!-- Gujarati Sub-Heading: સાલ મુબારક ૨૦૨૭ -->
+          <div class="gujarati-hero-banner">
+            <span class="saal-mubarak-text">સાલ મુબારક • નૂતન વર્ષાભિનંદન</span>
+          </div>
+          
+          <!-- Giant Glowing 2027 Typography -->
+          <div class="year-2027-container">
+            <div class="year-2027-glow" aria-hidden="true">2027</div>
+            <div class="year-2027-text" data-text="2027">2027</div>
+            <div class="year-sparkles" aria-hidden="true">
+              <span class="star-point sp-1">✦</span>
+              <span class="star-point sp-2">★</span>
+              <span class="star-point sp-3">✦</span>
+              <span class="star-point sp-4">✨</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtitle & Sender Byline -->
+        <div class="hero-subtext-group">
+          <p class="hero-subtitle">
+            "May this New Year bring endless happiness, success, good health, love and beautiful moments into your life."
+          </p>
+          <p class="hero-sender-intro">
+            સ્નેહભરી મંગલ કામનાઓ સાથે: <span class="sender-name-highlight">Jada Prakash (જાડા પ્રકાશ) ❤️</span>
+          </p>
+        </div>
+
+        <!-- LIVE NEW YEAR CELEBRATION CARD (TODAY IS NEW YEAR!) -->
+        <div class="countdown-card today-celebration-card" id="countdownWrapper">
+          <div class="today-live-badge">
+            <span class="live-dot"></span> <span>આજે નવું વર્ષ છે • LIVE CELEBRATION</span>
+          </div>
+          <h3 class="today-status-title" id="countdownStatusText">
+            🎊 સાલ મુબારક! આજે બેસતા વર્ષની મંગલ ઉજવણી! 🎊
+          </h3>
+          <p class="today-status-sub">
+            વિક્રમ સંવત ૨૦૨૭ ના પાવન દિવસે મા લક્ષ્મીજી આપના ઘરમાં અખૂટ ધન, સુખ અને શાંતિ આપે!
+          </p>
+
+          <!-- Live Auspicious Day Time Ticker -->
+          <div class="countdown-timer" id="countdownTimer">
+            <div class="countdown-col">
+              <div class="flip-card"><span class="flip-val" id="liveHours">12</span></div>
+              <span class="flip-unit">કલાક (HR)</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-col">
+              <div class="flip-card"><span class="flip-val" id="liveMinutes">00</span></div>
+              <span class="flip-unit">મિનિટ (MIN)</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-col">
+              <div class="flip-card"><span class="flip-val" id="liveSeconds">00</span></div>
+              <span class="flip-unit">સેકન્ડ (SEC)</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-col">
+              <div class="flip-card flip-card-gold"><span class="flip-val" id="liveAmPm">AM</span></div>
+              <span class="flip-unit">શુભ મુહૂર્ત</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Hero Action Buttons (Touch-friendly & High-conversion) -->
+        <div class="hero-cta-group">
+          <button id="celebrateNowBtn" class="btn btn-gold btn-pulse">
+            <i class="fa-solid fa-burst"></i>
+            <span>ફટાકડા ફોડો (Celebrate Now)</span>
+          </button>
+
+          <a href="#diyaSection" class="btn btn-glass">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <span>દીવો પ્રગટાવો (Light Diya)</span>
+          </a>
+
+          <button id="heroWhatsAppBtn" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp પર શેર કરો</span>
+          </button>
+        </div>
+
+        <!-- Interactive Screen Tap Hint -->
+        <p class="tap-hint">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> સ્ક્રીન પર ગમે ત્યાં ટચ કરીને ફટાકડા ફોડો! (Tap to burst crackers)
+        </p>
+
+        <!-- Animated Scroll Indicator -->
+        <a href="#diyaSection" class="scroll-down-indicator" aria-label="Scroll down">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <span class="scroll-text">આગળ જુઓ</span>
+          <i class="fa-solid fa-chevron-down scroll-arrow"></i>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         2. INTERACTIVE DIYA LIGHTING SECTION (દીવો પ્રગટાવો)
+         ============================================== -->
+    <section id="diyaSection" class="section-padding diya-lighting-section">
+      <div class="container text-center">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> મંગલ દીપ પ્રાગટ્ય</span>
+          <h2 class="section-title">નવા વર્ષનો શુભ દીવો પ્રગટાવો</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">દીપકના પાવન પ્રકાશ સાથે તમારા ઘરમાં સુખ, શાંતિ અને સમૃદ્ધિનું આગમન થાય!</p>
+        </div>
+
+        <div class="interactive-diya-box glass-card">
+          <div class="diya-glow-wrapper" id="diyaGlowWrap">
+            
+            <!-- Animated Flame -->
+            <div class="interactive-flame" id="interactiveFlame">
+              <div class="flame-core"></div>
+              <div class="flame-glow"></div>
+              <div class="flame-sparks">
+                <span>✦</span><span>★</span><span>✨</span>
+              </div>
+            </div>
+
+            <!-- Diya Body -->
+            <img src="assets/images/diya-kalash.svg" alt="Auspicious Diwali Diya" class="interactive-diya-img" id="interactiveDiyaImg">
+          </div>
+
+          <div class="diya-action-wrapper">
+            <button id="lightDiyaBtn" class="btn btn-gold btn-lg btn-pulse">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span id="lightDiyaBtnText">🪔 દીવો પ્રગટાવો (Tap to Light Diya)</span>
+            </button>
+            <p class="diya-status-msg" id="diyaStatusMsg">
+              દીવા પર ક્લિક કરો અને નવા વર્ષના આશીર્વાદ મેળવો!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         3. PERSONAL NEW YEAR WISHES SECTION (GUJARATI & ENGLISH)
+         ============================================== -->
+    <section id="wishes" class="section-padding wishes-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-crown"></i> હૃદયપૂર્વકની શુભેચ્છાઓ</span>
+          <h2 class="section-title">Personal New Year Wishes</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">દિવાળી અને બેસતા વર્ષના પવિત્ર અવસરે Jada Prakash તરફથી અંતરના આશીર્વાદ.</p>
+        </div>
+
+        <div class="wishes-grid">
+
+          <!-- Gujarati Personal Wish Card -->
+          <article class="glass-card wish-card gujarati-card">
+            <div class="card-glow-border"></div>
+            <div class="card-decor-top">
+              <img src="assets/images/diya-kalash.svg" alt="Auspicious Diya" class="card-motif-icon">
+              <span class="card-badge">ગુજરાતી શુભકામના</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="wish-title gujarati-heading">નવા વર્ષની હાર્દિક શુભકામનાઓ!</h3>
+              
+              <div class="quote-symbol">❝</div>
+              <blockquote class="personal-message-gujarati" id="personalMsgGujarati">
+                આ નવા વર્ષમાં તમારા જીવનમાં સુખ, શાંતિ, સમૃદ્ધિ અને સફળતા આવે. તમારા દરેક સપના સાકાર થાય અને દરેક દિવસ ખુશીઓથી ભરેલો રહે. નવા વર્ષની હાર્દિક શુભકામનાઓ!
+              </blockquote>
+              <div class="quote-symbol quote-close">❞</div>
+            </div>
+
+            <div class="card-footer">
+              <div class="signature-block">
+                <span class="signature-intro">શુભેચ્છક / Sender:</span>
+                <span class="signature-name handwriting">Jada Prakash</span>
+                <span class="signature-heart">❤️</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- English Personal Wish Card -->
+          <article class="glass-card wish-card english-card">
+            <div class="card-glow-border"></div>
+            <div class="card-decor-top">
+              <img src="assets/images/champagne-toast.svg" alt="Festive Celebrations" class="card-motif-icon">
+              <span class="card-badge">New Year 2027 Promise</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="wish-title">365 Days of Pure Abundance</h3>
+              
+              <div class="quote-symbol">❝</div>
+              <blockquote class="personal-message-english">
+                "May this New Year bring endless happiness, success, good health, love and beautiful moments into your life."
+              </blockquote>
+              <div class="quote-symbol quote-close">❞</div>
+
+              <div class="recipient-shoutout" id="cardRecipientNotice">
+                <i class="fa-solid fa-star"></i> Dedicated warmly to <strong id="cardRecipientName">You &amp; Your Family</strong>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="signature-block">
+                <span class="signature-intro">With Best Wishes,</span>
+                <span class="signature-name handwriting">Jada Prakash</span>
+                <span class="signature-heart">❤️</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Grand Signature Seal Banner -->
+        <div class="luxury-signature-banner glass-card">
+          <div class="sig-seal-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="sig-content">
+            <h4 class="sig-title">Official New Year 2027 Greetings</h4>
+            <p class="sig-subtitle">"With Best Wishes, Jada Prakash ❤️"</p>
+          </div>
+          <div class="sig-actions">
+            <button class="btn btn-sm btn-gold" id="rePlayWishChimeBtn">
+              <i class="fa-solid fa-bell"></i> Play Chime
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         4. SPECIAL MESSAGE CARD (SURPRISE REVEAL)
+         ============================================== -->
+    <section id="specialMessage" class="section-padding surprise-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-gift"></i> સરપ્રાઈઝ સંદેશ</span>
+          <h2 class="section-title">Special Surprise Message</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">રોયલ સીલ કરેલું પરબિડીયું! ટચ કરીને તમારો ખાસ સંદેશ અને આશીર્વાદ ખોલો.</p>
+        </div>
+
+        <!-- 3D Envelope Container -->
+        <div class="envelope-interactive-wrapper">
+          
+          <div class="envelope-card-outer" id="surpriseEnvelope">
+            
+            <div class="envelope-body">
+              <div class="envelope-pattern"></div>
+              
+              <!-- Envelope Triangular Top Flap -->
+              <div class="envelope-top-flap" id="envelopeTopFlap"></div>
+
+              <!-- Wax Seal Button -->
+              <div class="wax-seal-wrapper" id="waxSealBtn" role="button" tabindex="0" aria-label="Open New Year 2027 Envelope">
+                <div class="wax-seal-glow"></div>
+                <img src="assets/images/envelope-seal.svg" alt="Wax Seal 2027" class="wax-seal-img">
+              </div>
+
+              <!-- Secret Letter Card that slides up -->
+              <div class="secret-letter-card" id="secretLetter">
+                <div class="letter-inner">
+                  <div class="letter-header">
+                    <span class="letter-star">★ ★ ★</span>
+                    <h4 class="letter-title">નવા વર્ષનો શુભ આશીર્વાદ સંદેશ</h4>
+                    <span class="letter-date">વિક્રમ સંવત • ૨૦૨૭ (2027)</span>
+                  </div>
+
+                  <div class="letter-content">
+                    <p class="letter-greeting">વ્હાલા સ્નેહી <span class="highlight-recipient" id="secretLetterRecipient">મિત્ર</span>,</p>
+                    
+                    <p class="letter-quote-gujarati">
+                      "દરેક નવી સવાર તમારા માટે નવી આશાઓ લઈને આવે, દરેક દિવસ લક્ષ્મીજીની કૃપાથી સમૃદ્ધ બને અને દરેક સાંજ તમારા પરિવારમાં શાંતિ અને સંતોષ ભરી દે."
+                    </p>
+
+                    <p class="letter-text">
+                      As we celebrate <strong>2027</strong>, may you step into a golden chapter of good health, joyous gatherings, and unstoppable achievements.
+                    </p>
+                    
+                    <p class="letter-text">
+                      તમારા બધા જ મનોરથ પૂર્ણ થાય અને ૨૦૨૭નું આ વર્ષ તમારા અને તમારા પરિવાર માટે અત્યંત મંગલકારી નીવડે તેવી પ્રાર્થના!
+                    </p>
+                  </div>
+
+                  <div class="letter-signature">
+                    <div class="letter-sig-line"></div>
+                    <p class="letter-sig-text">સ્નેહાધીન / With Best Wishes,</p>
+                    <p class="letter-sig-name">Jada Prakash (જાડા પ્રકાશ) ❤️</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Surprise Controls -->
+          <div class="surprise-action-bar text-center">
+            <button id="revealSurpriseBtn" class="btn btn-gold btn-lg">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <span id="surpriseBtnText">પરબિડીયું ખોલો (Open Royal Envelope)</span>
+            </button>
+            <p class="surprise-hint" id="envelopeHint">ઉપરના સીલ પર ક્લિક કરીને ગુપ્ત શુભેચ્છા વાંચો!</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         5. NEW YEAR BLESSINGS (6 INTERACTIVE CARDS)
+         ============================================== -->
+    <section id="blessings" class="section-padding blessings-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-sparkles"></i> શુભ આશીર્વાદ</span>
+          <h2 class="section-title">New Year 2027 Blessings</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">દિવાળી અને બેસતા વર્ષના પવિત્ર અવસરે જીવનના છ સુવર્ણ આશીર્વાદ.</p>
+        </div>
+
+        <!-- 6 Interactive Blessing Cards -->
+        <div class="blessings-grid">
+
+          <!-- Blessing 1: Dhan & Laxmi -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <span class="blessing-gujarati-pill">ધન અને લક્ષ્મી કૃપા</span>
+            <h3 class="blessing-name">સમૃદ્ધિ (Wealth &amp; Abundance)</h3>
+            <p class="blessing-desc">
+              મા લક્ષ્મીજી આપના ઘરમાં અખૂટ ધન, વૈભવ, અને વ્યાપાર-ધંધામાં બમણી પ્રગતિ કરાવે તેવી પ્રાર્થના.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+          <!-- Blessing 2: Arogya -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <span class="blessing-gujarati-pill">તંદુરસ્તી અને દીર્ઘાયુષ્ય</span>
+            <h3 class="blessing-name">આરોગ્ય (Vibrant Health)</h3>
+            <p class="blessing-desc">
+              નવા વર્ષમાં આપ અને આપનો પરિવાર સદાય નીરોગી, ઉત્સાહી અને ઊર્જાવાન રહે.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+          <!-- Blessing 3: Anand & Khushi -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-face-smile-beam"></i>
+            </div>
+            <span class="blessing-gujarati-pill">આનંદ અને ખુશીઓ</span>
+            <h3 class="blessing-name">ઉલ્લાસ (Endless Joy)</h3>
+            <p class="blessing-desc">
+              આપના ઘરમાં હસતાં-ખીલતાં ચહેરા અને ઉત્સાહભરી ક્ષણોનો સદાય વાસ રહે.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+          <!-- Blessing 4: Shanti -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-dove"></i>
+            </div>
+            <span class="blessing-gujarati-pill">શાંતિ અને સંતોષ</span>
+            <h3 class="blessing-name">શાંતિ (Peace &amp; Harmony)</h3>
+            <p class="blessing-desc">
+              મનમાં પવિત્ર શાંતિ, પરિવારમાં સંપ અને પરસ્પર અવિરત પ્રેમ બની રહે.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+          <!-- Blessing 5: Safalta -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <span class="blessing-gujarati-pill">સિદ્ધિ અને પ્રગતિ</span>
+            <h3 class="blessing-name">સફળતા (Grand Success)</h3>
+            <p class="blessing-desc">
+              તમે હાથમાં લીધેલું દરેક કામ નિર્વિઘ્ને પાર પડે અને ઉત્તરોત્તર યશસ્વી પરિણામ મળે.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+          <!-- Blessing 6: Prem -->
+          <div class="blessing-card glass-card" data-tilt>
+            <div class="blessing-icon-box">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+            </div>
+            <span class="blessing-gujarati-pill">સ્નેહ અને એકતા</span>
+            <h3 class="blessing-name">પ્રેમ (Love &amp; Unity)</h3>
+            <p class="blessing-desc">
+              સગાં-સંબંધીઓ અને મિત્રો સાથેના સંબંધોમાં મીઠાશ અને સદ્ભાવના અખંડ રહે.
+            </p>
+            <div class="blessing-accent-line"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         6. CELEBRATION GALLERY & FORTUNE COOKIE
+         ============================================== -->
+    <section id="gallery" class="section-padding gallery-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-champagne-glasses"></i> મંગલ ક્ષણો</span>
+          <h2 class="section-title">2027 Celebration Moments</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">દિવાળી અને નવા વર્ષના પાવન ઉત્સવની રંગત.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <!-- Gallery Item 1: Auspicious Diya -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-visual">
+              <div class="visual-decor-glow"></div>
+              <img src="assets/images/diya-kalash.svg" alt="Auspicious Diya" class="gallery-icon-diya">
+              <div class="sparkling-sparkles">
+                <span class="g-sparkle s1">🪔</span>
+                <span class="g-sparkle s2">✨</span>
+                <span class="g-sparkle s3">✦</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h4 class="gallery-item-title">દિવ્ય દીપકની રોશની</h4>
+              <p class="gallery-item-desc">દીપકનો પ્રકાશ અજ્ઞાન અને ચિંતાઓને દૂર કરી નવી ઊર્જાનો સંચાર કરે છે.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2: Rangoli of Good Luck -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-visual">
+              <div class="visual-decor-glow"></div>
+              <img src="assets/images/rangoli-motif.svg" alt="Auspicious Rangoli" class="gallery-icon-diya">
+              <div class="sparkling-sparkles">
+                <span class="g-sparkle s1">🌸</span>
+                <span class="g-sparkle s2">✨</span>
+                <span class="g-sparkle s3">✦</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h4 class="gallery-item-title">મંગલ રંગોળી અને સ્વસ્તિક</h4>
+              <p class="gallery-item-desc">આંગણે દોરેલી રંગોળી સુખ, સમૃદ્ધિ અને ભાગ્યોદયનું પ્રતીક છે.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3: Golden Clock 12:00 -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-visual">
+              <div class="visual-decor-glow"></div>
+              <div class="css-golden-clock">
+                <div class="clock-face">
+                  <div class="clock-hand hand-hour"></div>
+                  <div class="clock-hand hand-minute"></div>
+                  <div class="clock-center-pin"></div>
+                  <span class="clock-num cn-12">12</span>
+                  <span class="clock-num cn-3">3</span>
+                  <span class="clock-num cn-6">6</span>
+                  <span class="clock-num cn-9">9</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h4 class="gallery-item-title">નવા પ્રભાતની ઘડી ૨૦૨૭</h4>
+              <p class="gallery-item-desc">દરેક પળ ખુશીઓ લઈને આવે અને તમારા જીવનને મહેકતું બનાવે.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive 2027 Fortune / Wish Generator Widget -->
+        <div class="fortune-widget-card glass-card">
+          <div class="fortune-badge">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> ૨૦૨૭નું શુભ ભાગ્યફળ (2027 FORTUNE)
+          </div>
+          <h3 class="fortune-heading">તમારા માટે ૨૦૨૭ કેવું રહેશે?</h3>
+          <p class="fortune-sub">નીચે આપેલા બટન પર ક્લિક કરીને તમારો આજનો શુભ સંદેશ મેળવો!</p>
+          
+          <div class="fortune-display-box" id="fortuneDisplay">
+            <span class="fortune-quote-icon">❝</span>
+            <p id="fortuneText" class="fortune-text">"૨૦૨૭નું આ વર્ષ તમારી બધી જ મહેનતને સોનેરી સફળતામાં ફેરવશે!"</p>
+            <span class="fortune-quote-icon">❞</span>
+          </div>
+
+          <button id="drawFortuneBtn" class="btn btn-gold btn-sm">
+            <i class="fa-solid fa-dice"></i> બીજો સંદેશ મેળવો (Draw Blessing)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         7. PERSONALIZED LINK GENERATOR & WHATSAPP SHARING
+         ============================================== -->
+    <section id="shareSection" class="section-padding share-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-brands fa-whatsapp"></i> વ્હોટ્સએપ વાયરલ શેર</span>
+          <h2 class="section-title">તમારા પરિવાર અને મિત્રો સાથે શેર કરો</h2>
+          <div class="title-separator">
+            <span class="separator-line"></span>
+            <span class="separator-diamond">◆</span>
+            <span class="separator-line"></span>
+          </div>
+          <p class="section-sub">તમારા મિત્ર કે સ્વજનનું નામ લખીને તેમના નામવાળી ખાસ લિંક બનાવો અને WhatsApp પર મોકલો!</p>
+        </div>
+
+        <div class="share-box-card glass-card">
+          <div class="share-card-header">
+            <div class="share-card-icon">
+              <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div>
+              <h3 class="share-card-title">નામ સાથે વ્યક્તિગત શુભેચ્છા મોકલો</h3>
+              <p class="share-card-desc">જેમને મોકલવી હોય તેમનું નામ લખો (દા.ત. રાહુલ, પ્રિયા, આનંદ, કાકા, માસી)</p>
+            </div>
+          </div>
+
+          <!-- Input Form -->
+          <div class="name-generator-form">
+            <div class="input-group">
+              <span class="input-icon"><i class="fa-solid fa-signature"></i></span>
+              <input type="text" id="friendNameInput" class="custom-input" placeholder="મિત્ર અથવા સગાંનું નામ લખો..." maxlength="40" autocomplete="off">
+              <button id="generateLinkBtn" class="btn btn-gold input-btn" type="button">
+                <i class="fa-solid fa-magic"></i> લિંક બનાવો
+              </button>
+            </div>
+          </div>
+
+          <!-- Live Generated Link Preview -->
+          <div class="generated-link-display" id="generatedLinkWrapper">
+            <label class="input-label" for="shareableUrlInput">
+              <i class="fa-solid fa-link"></i> તમારી ખાસ વેબસાઇટ લિંક:
+            </label>
+            <div class="link-copy-group">
+              <input type="text" id="shareableUrlInput" class="custom-input readonly-input" readonly value="">
+              <button id="copyLinkBtn" class="btn btn-gold input-btn" type="button" title="લિંક કોપી કરો">
+                <i class="fa-solid fa-copy"></i> લિંક કોપી કરો
+              </button>
+            </div>
+          </div>
+
+          <!-- Prominent Sharing Buttons -->
+          <div class="share-buttons-row">
+            <!-- Official WhatsApp Sharing Button -->
+            <button id="mainWhatsAppShareBtn" class="btn btn-whatsapp btn-lg">
+              <i class="fa-brands fa-whatsapp fa-xl"></i>
+              <span>WhatsApp પર શેર કરો</span>
+            </button>
+
+            <!-- Native Device Share Button (Works on mobile phones) -->
+            <button id="nativeDeviceShareBtn" class="btn btn-glass btn-lg">
+              <i class="fa-solid fa-share-nodes"></i>
+              <span>અન્ય એપ્સમાં શેર કરો</span>
+            </button>
+
+            <!-- Test Link Button -->
+            <a id="previewCustomLinkBtn" href="#" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>લિંક ખોલીને જુઓ</span>
             </a>
-        </div>
-    </header>
+          </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo"><span class="blue">H</span>YAPE</div>
-
-        <ul class="menu">
-            <li><a class="active" href="#">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">PAGE</a></li>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">CONTACT US</a></li>
-        </ul>
-
-        <div class="cart-section">
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <span>CART - $0</span>
-
-            <div class="cart-icon">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <!-- <span class="cart-count">0</span> -->
+          <!-- WhatsApp Message Preview Card -->
+          <div class="whatsapp-preview-box">
+            <div class="wa-preview-header">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp મેસેજ પ્રિવ્યુ (આવો મેસેજ જશે):
             </div>
+            <pre class="wa-preview-text" id="waMessagePreview">🪔✨ શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન! ✨🪔
+🎉 Happy New Year 2027 / સાલ મુબારક! 🎊
+
+આજે નવું વર્ષ (બેસતું વર્ષ) છે!
+તમને અને તમારા સમગ્ર પરિવારને નવા વર્ષની ખૂબ ખૂબ શુભકામનાઓ! ❤️
+મા લક્ષ્મીજી તમારા ઘરમાં સુખ, શાંતિ અને સમૃદ્ધિ આપે.
+
+👉 આ ખાસ ડિજિટલ શુભેચ્છા અને ફટાકડા જોવા અહીં ક્લિક કરો:
+[Website URL]
+
+With Best Wishes,
+Jada Prakash ❤️</pre>
+          </div>
+
         </div>
-    </nav>
 
-    <section class="hero">
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-            <h1>DRESSES<span> ARE</span> GOOD</h1>
-
-            <h1>BUT OUR DRESSES ARE <span>BEST</span></h1>
-
-            <!-- <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                commodo <br />
-                Cum sociis natoque penatibus<br />
-                et magnis dis parturient.
-            </p> -->
-<div class="sub-text">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean 
-        commodo ligula eget dolor. Aenean massa. Cum sociis nat<br> oque penatibus et magnis dis pa</p>
-</div>
-                        
-
-            <div class="slider-dots">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-
-        
+      </div>
     </section>
 
-    <section class="about-section">
-        <div class="section-title">ABOUT <span>US</span></div>
+    <!-- ==============================================
+         8. INTERACTIVE CELEBRATION CONTROL BAR
+         ============================================== -->
+    <section class="section-padding celebration-toolbar-section">
+      <div class="container text-center">
+        <h3 class="toolbar-title">ફરીથી ઉજવણી કરવી છે?</h3>
+        <p class="toolbar-sub">ફટાકડા ફોડો, ફૂલઝર સળગાવો અને ફરીથી આનંદ માણો!</p>
 
-        <div class="about-container">
-            <div class="about-box">
-                <i class="fa-solid fa-gear"></i>
-                <h3>SETTING</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in. Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in.
-                </p>
-            </div>
-
-            <div class="about-box">
-                <i class="fa-solid fa-vault"></i>
-                <h3 class="active">MONEY BACK</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in. Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in.
-                </p>
-            </div>
-
-            <div class="about-box">
-                <i class="fa-solid fa-globe"></i>
-                <h3>WORLDWIDE SHIPPING</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in. Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in.
-                </p>
-            </div>
-
-            <div class="about-box">
-                <i class="fa-regular fa-compass"></i>
-                <h3>WORLDWIDE SHIPPING</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in. Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus
-                    efficiantur in.
-                </p>
-            </div>
+        <div class="toolbar-btn-group">
+          <button id="salvoFireworksBtn" class="btn btn-gold">
+            <i class="fa-solid fa-burst"></i> ફટાકડાની રમઝટ (Fireworks)
+          </button>
+          <button id="burstConfettiBtn" class="btn btn-glass">
+            <i class="fa-solid fa-cubes-stacked"></i> રંગબેરંગી ફૂલો (Confetti)
+          </button>
+          <button id="restartCelebrationBtn" class="btn btn-whatsapp">
+            <i class="fa-solid fa-rotate-right"></i> ફરી શરૂ કરો (Restart)
+          </button>
         </div>
+      </div>
     </section>
 
-    <section class="new-collection">
-        <h2 class="section-heading"><span>NEW</span> COLLECTION</h2>
+  </main>
 
-        <div class="products">
-            <!-- Product 1 -->
-            <div class="product-box">
-                <div class="product-img">
-                    <img src="./img/blue sirt.jpg" alt="Product" />
-                </div>
+  <!-- ==============================================
+       9. LUXURY FOOTER
+       ============================================== -->
+  <footer class="festive-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <img src="assets/images/favicon.svg" alt="2027 Emblem" class="footer-logo">
+        <span class="footer-year-title">શુભ દિપાવલી અને સાલ મુબારક ૨૦૨૭</span>
+        <p class="footer-byline">
+          આજે નવું વર્ષ (બેસતું વર્ષ) છે • તમને અને તમારા સ્નેહીજનોને હૃદયપૂર્વક સમર્પિત.
+        </p>
+      </div>
 
-                <div class="overlay">
-                    <div class="icons">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a href="#" class="active"><i class="fa-solid fa-code-compare"></i></a>
-                        <a href="#"><i class="fa-regular fa-clock"></i></a>
-                    </div>
+      <div class="footer-signature-box">
+        <p class="footer-sig-line">
+          Made with <span class="heart-pulse">❤️</span> by <strong class="footer-author">Jada Prakash (જાડા પ્રકાશ)</strong>
+        </p>
+        <p class="footer-gujarati-wish">
+          "આ નવા વર્ષમાં તમારા જીવનમાં સુખ, શાંતિ, સમૃદ્ધિ અને સફળતા આવે. તમારા દરેક સપના સાકાર થાય અને દરેક દિવસ ખુશીઓથી ભરેલો રહે. નવા વર્ષની હાર્દિક શુભકામનાઓ!"
+        </p>
+      </div>
 
-                    <a href="#" class="cart-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        ADD TO CART
-                    </a>
-                </div>
+      <div class="footer-actions">
+        <a href="#hero" class="btn btn-sm btn-glass back-to-top" aria-label="Back to Top">
+          <i class="fa-solid fa-arrow-up"></i> ઉપર જાઓ (Top)
+        </a>
+      </div>
 
-                <div class="product-info">
-                    <h4>BLUE SHIRT</h4>
-                    <span>$26</span>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-box">
-                <div class="product-img">
-                    <img src="./img/back shirt.jpg" alt="Product" />
-                </div>
-
-                <div class="overlay">
-                    <div class="icons">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a href="#" class="active"><i class="fa-solid fa-code-compare"></i></a>
-                        <a href="#"><i class="fa-regular fa-clock"></i></a>
-                    </div>
-
-                    <a href="#" class="cart-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        ADD TO CART
-                    </a>
-                </div>
-
-                <div class="product-info">
-                    <h4>BLACK SHIRT</h4>
-                    <span>$31</span>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-box">
-                <div class="product-img">
-                    <img src="./img/yellow sirt.jpg" alt="Product" />
-                </div>
-
-                <div class="overlay">
-                    <div class="icons">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a href="#" class="active"><i class="fa-solid fa-code-compare"></i></a>
-                        <a href="#"><i class="fa-regular fa-clock"></i></a>
-                    </div>
-
-                    <a href="#" class="cart-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        ADD TO CART
-                    </a>
-                </div>
-
-                <div class="product-info">
-                    <h4>YELLOW TSHIRT</h4>
-                    <span>$21</span>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-box">
-                <div class="product-img">
-                    <img src="./img/jeans.jpg" alt="Product" />
-                </div>
-
-                <div class="overlay">
-                    <div class="icons">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a href="#" class="active"><i class="fa-solid fa-code-compare"></i></a>
-                        <a href="#"><i class="fa-regular fa-clock"></i></a>
-                    </div>
-
-                    <a href="#" class="cart-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        ADD TO CART
-                    </a>
-                </div>
-
-                <div class="product-info">
-                    <h4>JEANS</h4>
-                    <span>$56</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sale-banner">
-        <div class="sale-content">
-            <h2>SALE UPTO 40% OFF</h2>
-            <p>Don,t Forget to Buy</p>
-        </div>
-    </section>
-<section class="our-products">
-    <h2 class="our-products-heading">
-        <span>OUR</span> PRODUCTS
-    </h2>
-
-    <div class="our-products-list">
-
-        <!-- Product 1 -->
-        <div class="our-product-box">
-            <span class="sale-label-right">SALE</span>
-
-            <div class="our-product-img">
-                <img src="./img/tshirtall.jpg" alt="Tshirt">
-            </div>
-
-            <div class="our-product-overlay">
-                <div class="our-product-icons">
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#" ><i class="fa-solid fa-code-compare"></i></a>
-                    <a href="#"><i class="fa-regular fa-clock"></i></a>
-                </div>
-
-                <a href="#" class="our-cart-btn">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    ADD TO CART
-                </a>
-            </div>
-
-            <div class="our-product-info">
-                <h4>TSHIRT</h4>
-                <span>$26</span>
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="our-product-box">
-            <div class="our-product-img">
-                <img src="./img/jeans.jpg" alt="Jeans">
-            </div>
-
-            <div class="our-product-overlay">
-                <div class="our-product-icons">
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#" ><i class="fa-solid fa-code-compare"></i></a>
-                    <a href="#"><i class="fa-regular fa-clock"></i></a>
-                </div>
-
-                <a href="#" class="our-cart-btn">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    ADD TO CART
-                </a>
-            </div>
-
-            <div class="our-product-info">
-                <h4>JEANS</h4>
-                <span>$31</span>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="our-product-box">
-            <span class="sale-label-left">NEW</span>
-
-            <div class="our-product-img">
-                <img src="./img/all SHOES.avif" alt="Shoes">
-            </div>
-
-            <div class="our-product-overlay">
-                <div class="our-product-icons">
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#" ><i class="fa-solid fa-code-compare"></i></a>
-                    <a href="#"><i class="fa-regular fa-clock"></i></a>
-                </div>
-
-                <a href="#" class="our-cart-btn">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    ADD TO CART
-                </a>
-            </div>
-
-            <div class="our-product-info">
-                <h4>SHOES</h4>
-                <span>$21</span>
-            </div>
-        </div>
+      <div class="footer-bottom-copy">
+        <p>&copy; 2027 Jada Prakash. All Rights Reserved. Ready for WhatsApp &amp; GitHub Pages.</p>
+      </div>
 
     </div>
-</section>
+  </footer>
 
+  <!-- Floating Toast Notification -->
+  <div id="toastNotification" class="toast-notification" role="alert" aria-live="polite">
+    <div class="toast-content">
+      <i class="fa-solid fa-circle-check toast-icon" id="toastIcon"></i>
+      <span id="toastMessage">Link copied to clipboard!</span>
+    </div>
+  </div>
 
-
-    <section class="customer-review">
-        <div class="container">
-            <h2 class="review-heading">CUSTOMER'S <span>REVIEW</span></h2>
-
-            <div class="review-wrapper">
-                <!-- Review 1 -->
-                <div class="review-box">
-                    <div class="review-img">
-                        <img src="./img/client1.jpg" alt="" />
-                    </div>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean
-                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                        penatibus et magnis dis pa.
-                    </p>
-
-                    <h4>JOHN</h4>
-                    <span>UK, PAK</span>
-
-                    <div class="dots">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-box">
-                    <div class="review-img">
-                        <img src="./img/client2.jpg" alt="" />
-                    </div>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean
-                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                        penatibus et magnis dis pa.
-                    </p>
-
-                    <h4>JOHN</h4>
-                    <span>UK, PAK</span>
-
-                    <div class="dots">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-box">
-                    <div class="review-img">
-                        <img src="./img/client3.jpg" alt="" />
-                    </div>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean
-                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                        penatibus et magnis dis pa.
-                    </p>
-
-                    <h4>JOHN</h4>
-                    <span>UK, PAK</span>
-
-                    <div class="dots">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="order-section">
-        <div class="order-container">
-            <h2>PLACE YOUR <span>ORDER</span>  NOW</h2>
-
-            <form class="order-form">
-                <input type="email" placeholder="Enter your email here" />
-
-                <input type="text" placeholder="Your Order Here" />
-
-                <button id="btnorder" type="submit">ORDER NOW</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="improve-section">
-        <div class="improve-content">
-            <h2>IMPROVE <span>YOUR</span> DRESSING</h2>
-
-            <p>REAL-TIME FEEDBACK. REAL-TIME RESULTS.</p>
-        </div>
-    </section>
-
-    <section class="contact-footer">
-        <div class="footer-container">
-            <!-- Left Side -->
-            <div class="footer-left">
-                <h2><span>H</span>YAPE</h2>
-
-                <p class="footer-text">Lorem ipsum dolor sit amet, consectetuer</p>
-
-                <p class="footer-desc">
-                    adipisicing elit. Aenean<br />
-                    commodo ligula eget dolor. Aenean<br />
-                    massa. Cum sociis nat<br />
-                    oque penatibus et magnis dis pa
-                </p>
-
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                </div>
-            </div>
-
-            <!-- Right Side -->
-            <div class="footer-right">
-                <form>
-                    <div class="input-row">
-                        <input type="text" placeholder="Your Name" />
-                        <input type="email" placeholder="Your Email" />
-                    </div>
-
-                    <textarea placeholder="Your Message..."></textarea>
-
-                    <button type="submit">SEND</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Copyright -->
-
-    <footer class="copyright">
-        <p>All Rights Reserved ©</p>
-    </footer>
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
 </body>
-
 </html>

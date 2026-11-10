@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="goldRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF0"/>
+      <stop offset="45%" stop-color="#FCD34D"/>
+      <stop offset="75%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </radialGradient>
+    <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="30%" stop-color="#FDE68A"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Starburst -->
+  <g fill="url(#goldLinear)" opacity="0.3">
+    <path d="M100 10 L104 35 L125 18 L118 43 L145 35 L130 57 L160 58 L138 76 L168 85 L140 98 L168 112 L138 121 L160 139 L130 140 L145 162 L118 154 L125 179 L104 162 L100 187 L96 162 L75 179 L82 154 L55 162 L70 140 L40 139 L62 121 L32 112 L60 98 L32 85 L62 76 L40 58 L70 57 L55 35 L82 43 L75 18 L96 35 Z"/>
+  </g>
+
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="82" stroke="url(#goldLinear)" stroke-width="2.5" fill="none" opacity="0.8"/>
+  <circle cx="100" cy="100" r="76" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,3" fill="none" opacity="0.6"/>
+
+  <!-- Laurel Wreath -->
+  <g fill="none" stroke="url(#goldLinear)" stroke-width="2.5" stroke-linecap="round">
+    <path d="M52 140 C40 110 42 75 65 52"/>
+    <path d="M148 140 C160 110 158 75 135 52"/>
+  </g>
+  <!-- Leaves Left -->
+  <g fill="url(#goldLinear)" opacity="0.9">
+    <path d="M48 130 C42 128 40 120 46 118 C50 122 50 128 48 130 Z"/>
+    <path d="M44 112 C38 110 37 102 43 100 C47 104 47 110 44 112 Z"/>
+    <path d="M43 94 C38 90 38 82 44 82 C48 86 47 92 43 94 Z"/>
+    <path d="M48 76 C43 72 45 64 51 65 C54 70 52 75 48 76 Z"/>
+    <path d="M56 61 C52 56 56 48 62 50 C64 56 61 60 56 61 Z"/>
+    <!-- Leaves Right -->
+    <path d="M152 130 C158 128 160 120 154 118 C150 122 150 128 152 130 Z"/>
+    <path d="M156 112 C162 110 163 102 157 100 C153 104 153 110 156 112 Z"/>
+    <path d="M157 94 C162 90 162 82 156 82 C152 86 153 92 157 94 Z"/>
+    <path d="M152 76 C157 72 155 64 149 65 C146 70 148 75 152 76 Z"/>
+    <path d="M144 61 C148 56 144 48 138 50 C136 56 139 60 144 61 Z"/>
+  </g>
+
+  <!-- Central Disc -->
+  <circle cx="100" cy="100" r="58" fill="#080e1a" stroke="url(#goldLinear)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="54" fill="none" stroke="url(#goldLinear)" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Stars -->
+  <g fill="#FDE68A" filter="url(#softGlow)">
+    <polygon points="100,60 102,66 108,66 103,70 105,76 100,72 95,76 97,70 92,66 98,66"/>
+    <polygon points="82,66 83,70 87,70 84,73 85,77 82,74 79,77 80,73 77,70 81,70" transform="scale(0.8) translate(18, 12)"/>
+    <polygon points="118,66 119,70 123,70 120,73 121,77 118,74 115,77 116,73 113,70 117,70" transform="scale(0.8) translate(8, 12)"/>
+  </g>
+
+  <!-- Typography 2027 -->
+  <text x="100" y="112" font-family="'Cinzel', serif" font-size="28" font-weight="900" fill="url(#goldLinear)" text-anchor="middle" letter-spacing="3" filter="url(#softGlow)">2027</text>
+  <text x="100" y="128" font-family="'Outfit', sans-serif" font-size="8.5" font-weight="600" fill="#E2E8F0" text-anchor="middle" letter-spacing="3">NEW YEAR</text>
+
+  <!-- Bottom Ribbon / Accent -->
+  <path d="M84 140 L100 136 L116 140 L110 145 L100 142 L90 145 Z" fill="url(#goldLinear)"/>
+</svg>
+
