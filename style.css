@@ -815,6 +815,13 @@ body {
   gap: 0.4rem 1rem;
 }
 
+.hero-main-title.gujarati-hero-title {
+  font-family: var(--font-gujarati), var(--font-sans);
+  font-size: clamp(2.6rem, 7.5vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
 .title-word {
   display: inline-block;
   background: var(--grad-gold-metallic);
@@ -855,6 +862,23 @@ body {
   position: relative;
   display: inline-block;
   margin-top: 0.2rem;
+}
+
+.vikram-samvat-prefix {
+  font-family: var(--font-gujarati), var(--font-sans);
+  font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--gold-champagne);
+  letter-spacing: 1px;
+  text-shadow: 0 0 16px rgba(245, 158, 11, 0.6);
+  margin-bottom: 0.15rem;
+}
+
+.vikram-samvat-container .year-2027-text,
+.vikram-samvat-container .year-2027-glow {
+  font-family: var(--font-gujarati), var(--font-serif);
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
 .year-2027-text {

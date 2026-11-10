@@ -53,16 +53,14 @@
 
   <!-- Stars -->
   <g fill="#FDE68A" filter="url(#softGlow)">
-    <polygon points="100,60 102,66 108,66 103,70 105,76 100,72 95,76 97,70 92,66 98,66"/>
-    <polygon points="82,66 83,70 87,70 84,73 85,77 82,74 79,77 80,73 77,70 81,70" transform="scale(0.8) translate(18, 12)"/>
-    <polygon points="118,66 119,70 123,70 120,73 121,77 118,74 115,77 116,73 113,70 117,70" transform="scale(0.8) translate(8, 12)"/>
+    <polygon points="100,58 102,64 108,64 103,68 105,74 100,70 95,74 97,68 92,64 98,64"/>
   </g>
 
-  <!-- Typography 2027 -->
-  <text x="100" y="112" font-family="'Cinzel', serif" font-size="28" font-weight="900" fill="url(#goldLinear)" text-anchor="middle" letter-spacing="3" filter="url(#softGlow)">2027</text>
-  <text x="100" y="128" font-family="'Outfit', sans-serif" font-size="8.5" font-weight="600" fill="#E2E8F0" text-anchor="middle" letter-spacing="3">NEW YEAR</text>
+  <!-- Typography Vikram Samvat 2081 -->
+  <text x="100" y="86" font-family="'Hind Vadodara', sans-serif" font-size="10.5" font-weight="700" fill="#E2E8F0" text-anchor="middle" letter-spacing="1">વિક્રમ સંવત</text>
+  <text x="100" y="118" font-family="'Hind Vadodara', sans-serif" font-size="28" font-weight="900" fill="url(#goldLinear)" text-anchor="middle" letter-spacing="2" filter="url(#softGlow)">૨૦૮૧</text>
+  <text x="100" y="132" font-family="'Hind Vadodara', sans-serif" font-size="8.5" font-weight="700" fill="#FCD34D" text-anchor="middle" letter-spacing="1">સાલ મુબારક</text>
 
-  <!-- Bottom Ribbon / Accent -->
-  <path d="M84 140 L100 136 L116 140 L110 145 L100 142 L90 145 Z" fill="url(#goldLinear)"/>
+  <!-- Bottom Accent -->
+  <path d="M84 142 L100 138 L116 142 L110 147 L100 144 L90 147 Z" fill="url(#goldLinear)"/>
 </svg>
-

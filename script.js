@@ -26,7 +26,7 @@
   const CONFIG = {
     senderName: 'Jada Prakash',
     senderNameGujarati: 'Jada Prakash (જાડા પ્રકાશ)',
-    targetYear: 2027,
+    targetYear: 2081,
     audioSrc: 'assets/music/celebration.wav',
     audioMp3Src: 'assets/music/celebration.mp3'
   };
@@ -50,13 +50,13 @@
     ['#ffffff', '#fffbe0', '#fce7f3', '#ffd700']  // Starlight White
   ];
 
-  // Gujarati Fortune Blessings for 2027
+  // Gujarati Fortune Blessings for Vikram Samvat 2081
   const FORTUNES_GUJARATI = [
-    "૨૦૨૭નું આ નવું વર્ષ તમારી બધી જ મહેનતને સોનેરી સફળતામાં ફેરવશે!",
+    "વિક્રમ સંવત ૨૦૮૧ નું આ નવું વર્ષ તમારી બધી જ મહેનતને સોનેરી સફળતામાં ફેરવશે!",
     "મા લક્ષ્મીજીની કૃપાથી આપના ઘરમાં અખૂટ ધન, શાંતિ અને સમૃદ્ધિનો વાસ રહેશે.",
     "નવા વર્ષમાં તમારા અટકેલા બધા જ કાર્યો નિર્વિઘ્ને સિદ્ધ થશે અને ઉત્તમ યશ મળશે.",
     "તમારા પરિવારમાં પ્રેમ, સંપ અને સદ્ભાવનાનો મંગલ દીપક સદાય પ્રજ્વલિત રહેશે.",
-    "૨૦૨૭નું દરેક પ્રભાત તમારા માટે નવી આશાઓ અને દરેક સાંજ સંતોષ લઈને આવશે.",
+    "વિક્રમ સંવત ૨૦૮૧ નું દરેક પ્રભાત તમારા માટે નવી આશાઓ અને દરેક સાંજ સંતોષ લઈને આવશે.",
     "વ્યાપાર, નોકરી અને અભ્યાસમાં આપ ઉત્તરોત્તર નવી ઊંચાઈઓ સર કરશો તેવી મંગલ કામના!",
     "આ વર્ષે તમારા દરેક સપના સાકાર થશે અને ઉત્સાહભરી ખુશીઓ આપની સાથે રહેશે."
   ];
@@ -227,7 +227,7 @@
       if (DOM.greetingRecipient) {
         DOM.greetingRecipient.innerHTML = `વ્હાલા <strong>${sanitized}</strong>, નૂતન વર્ષાભિનંદન!`;
       }
-      document.title = `સાલ મુબારક ${sanitized}! | Happy New Year 2027 | Jada Prakash`;
+      document.title = `સાલ મુબારક ${sanitized}! | નૂતન વર્ષાભિનંદન • વિક્રમ સંવત ૨૦૮૧ | Jada Prakash`;
       if (DOM.cardRecipientName) {
         DOM.cardRecipientName.textContent = `${sanitized} અને આપનો પરિવાર`;
       }
@@ -240,7 +240,7 @@
     } else {
       state.currentRecipient = '';
       if (DOM.greetingRecipient) {
-        DOM.greetingRecipient.textContent = 'આજે બેસતું વર્ષ છે • સાલ મુબારક ૨૦૨૭!';
+        DOM.greetingRecipient.textContent = 'આજે બેસતું વર્ષ છે • વિક્રમ સંવત ૨૦૮૧ સાલ મુબારક!';
       }
       if (DOM.cardRecipientName) {
         DOM.cardRecipientName.textContent = 'તમે અને તમારો પરિવાર';
@@ -275,7 +275,7 @@
     }
 
     const greetingLine = name ? `વ્હાલા ${name},\n\n` : '';
-    const shareMessage = `🪔✨ શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન! ✨🪔\n🎉 Happy New Year 2027 / સાલ મુબારક! 🎊\n\nઆજે નવું વર્ષ (બેસતું વર્ષ) છે!\n${greetingLine}તમને અને તમારા સમગ્ર પરિવારને નવા વર્ષની ખૂબ ખૂબ શુભકામનાઓ! ❤️\nમા લક્ષ્મીજી તમારા ઘરમાં સુખ, શાંતિ અને સમૃદ્ધિ આપે.\n\n👉 આ ખાસ ડિજિટલ શુભેચ્છા અને ફટાકડા જોવા અહીં ક્લિક કરો:\n${finalUrl}\n\nWith Best Wishes,\n${CONFIG.senderNameGujarati} ❤️`;
+    const shareMessage = `🪔✨ શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન! ✨🪔\n🎉 વિક્રમ સંવત ૨૦૮૧ સાલ મુબારક! 🎊\n\nઆજે નવું વર્ષ (બેસતું વર્ષ) છે!\n${greetingLine}તમને અને તમારા સમગ્ર પરિવારને બેસતા વર્ષની ખૂબ ખૂબ શુભકામનાઓ! ❤️\nમા લક્ષ્મીજી તમારા ઘરમાં સુખ, શાંતિ, સમૃદ્ધિ અને રિદ્ધિ-સિદ્ધિ આપે.\n\n👉 આ ખાસ ડિજિટલ શુભેચ્છા અને ફટાકડા જોવા અહીં ક્લિક કરો:\n${finalUrl}\n\nWith Best Wishes,\n${CONFIG.senderNameGujarati} ❤️`;
 
     if (DOM.waMessagePreview) {
       DOM.waMessagePreview.textContent = shareMessage;
@@ -874,7 +874,7 @@
 
         if (navigator.share) {
           navigator.share({
-            title: `આજે બેસતું વર્ષ છે! શુભ દિપાવલી અને નૂતન વર્ષાભિનંદન ૨૦૨૭ | Jada Prakash`,
+            title: `આજે બેસતું વર્ષ છે! નૂતન વર્ષાભિનંદન • વિક્રમ સંવત ૨૦૮૧ | Jada Prakash`,
             text: shareMessage,
             url: finalUrl
           }).catch(err => {
@@ -967,7 +967,7 @@
           fireworks.launchSalvo(8);
           confetti.burst(160);
           playFanfareChimes();
-          showToast('🎉 ફરીથી ઉજવણી શરૂ થઈ! સાલ મુબારક ૨૦૨૭!');
+          showToast('🎉 ફરીથી ઉજવણી શરૂ થઈ! વિક્રમ સંવત ૨૦૮૧ સાલ મુબારક!');
         }, 400);
       });
     }
